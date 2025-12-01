@@ -47,7 +47,7 @@ public class SubmitScipt : MonoBehaviour, IdropReact
     }
 
 
-    public void reset() 
+    public void resetEverything() 
     {
         value = -1;
         submited = false;

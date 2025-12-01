@@ -91,7 +91,7 @@ public class NPCScript : MonoBehaviour
     private IEnumerator startEndWalk()
     {
         yield return new WaitUntil(() => submitScript.isSubmited());
-        submitScript.reset();
+        submitScript.resetEverything();
         Talk(currentNPC.endDialogue);
         yield return StartCoroutine(WalkCycleOut());
         Talk(currentNPC.endDialogue);

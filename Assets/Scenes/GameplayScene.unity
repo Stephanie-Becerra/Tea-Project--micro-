@@ -171,7 +171,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -471,7 +471,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4953247214732031999, guid: 8f58ecf689f0c4b4aa9578743aba1029, type: 3}
   m_PrefabInstance: {fileID: 1085472798345561269}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &381958524
+--- !u!114 &381958528
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -779,7 +779,7 @@ MonoBehaviour:
   teaNames:
   - Black Tea
   - Cinnamin tea
-  teaTypes: 0100000002000000
+  teaTypes: 0000000001000000
   currentTeaType: 0
   currentNPC: {fileID: 11400000, guid: 03ff8462ffbc8464fb77cb905e3c186d, type: 2}
   theTextController: {fileID: 344802386}
@@ -1537,8 +1537,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.9999924, y: -10}
-  m_SizeDelta: {x: -10.000015, y: -20}
+  m_AnchoredPosition: {x: 0, y: -10}
+  m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1505497173
 MonoBehaviour:
@@ -1915,7 +1915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dcf1cd127a55424898f0365eb5de02f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theNpc: {fileID: 0}
+  theNpc: {fileID: 926263143}
+  textControl: {fileID: 344802386}
 --- !u!1 &1757202993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2289,7 +2290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTea: 
-  currentVal: -1
+  currentVal: 0
+  currentIter: 0
 --- !u!4 &2146784580
 Transform:
   m_ObjectHideFlags: 0
@@ -2393,5 +2395,5 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4953247214732031999, guid: 8f58ecf689f0c4b4aa9578743aba1029, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 381958524}
+      addedObject: {fileID: 381958528}
   m_SourcePrefab: {fileID: 100100000, guid: 8f58ecf689f0c4b4aa9578743aba1029, type: 3}
