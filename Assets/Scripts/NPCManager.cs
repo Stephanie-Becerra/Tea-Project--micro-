@@ -13,4 +13,4 @@ public class NPCManager : MonoBehaviour
         currentNPC.SetNewProfile(currentNPCType);
     }
 
-}
+}//

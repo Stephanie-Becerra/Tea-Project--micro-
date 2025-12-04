@@ -11,3 +11,4 @@ public class DialogueText : ScriptableObject
     [TextArea(5, 10)]
     public string[] paragraphs;
 }
+//

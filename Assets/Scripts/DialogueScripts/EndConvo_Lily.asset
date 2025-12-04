@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b78ba918e264c24696c8e5dccdf96c1, type: 3}
   m_Name: EndConvo_Lily
   m_EditorClassIdentifier: 
-  npcName: Lily
+  npcName: Lilly
   paragraphs:
   - Thank you so much. it taste amazing.

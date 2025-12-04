@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 344802385}
   - component: {fileID: 344802388}
   - component: {fileID: 344802387}
-  - component: {fileID: 344802386}
+  - component: {fileID: 344802389}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -412,22 +412,6 @@ RectTransform:
   m_AnchoredPosition: {x: -183, y: 169}
   m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &344802386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344802384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a3f9accff259f143b35c051b1074f0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPCNameText: {fileID: 1257334647}
-  NPCDialogueText: {fileID: 1505497173}
-  currentNPC: {fileID: 926263143}
-  typeingSpeed: 10
 --- !u!114 &344802387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,6 +450,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344802384}
   m_CullTransparentMesh: 1
+--- !u!114 &344802389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344802384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3f9accff259f143b35c051b1074f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCNameText: {fileID: 1257334647}
+  NPCDialogueText: {fileID: 1505497173}
+  currentNPC: {fileID: 926263145}
+  typeingSpeed: 10
 --- !u!1 &381958520 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4953247214732031999, guid: 8f58ecf689f0c4b4aa9578743aba1029, type: 3}
@@ -688,8 +688,8 @@ GameObject:
   m_Component:
   - component: {fileID: 926263142}
   - component: {fileID: 926263141}
-  - component: {fileID: 926263143}
   - component: {fileID: 926263144}
+  - component: {fileID: 926263145}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -764,29 +764,6 @@ Transform:
   m_Father: {fileID: 1973320513}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &926263143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 926263140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f190dd73dff2cc4781e9b4174f43ffd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teaNames:
-  - Black Tea
-  - Cinnamin tea
-  teaTypes: 0000000001000000
-  currentTeaType: 0
-  currentNPC: {fileID: 11400000, guid: 03ff8462ffbc8464fb77cb905e3c186d, type: 2}
-  theTextController: {fileID: 344802386}
-  textCanvas: {fileID: 419577879}
-  submitScript: {fileID: 1665022084}
-  npcMang: {fileID: 1973320512}
-  endManger: {fileID: 1380174663}
 --- !u!61 &926263144
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -832,6 +809,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.6466877}
   m_EdgeRadius: 0
+--- !u!114 &926263145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926263140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f190dd73dff2cc4781e9b4174f43ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teaNames:
+  - Black Tea
+  - Cinnamin tea
+  teaTypes: 0000000001000000
+  currentTeaType: 0
+  currentNPC: {fileID: 11400000, guid: 03ff8462ffbc8464fb77cb905e3c186d, type: 2}
+  theTextController: {fileID: 344802389}
+  textCanvas: {fileID: 419577879}
+  submitScript: {fileID: 1665022084}
+  npcMang: {fileID: 1973320514}
+  endManger: {fileID: 1380174663}
 --- !u!1 &1035817462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,7 +1282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65970f72b299264da24d07e4b4713e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theNPC: {fileID: 926263143}
+  theNPC: {fileID: 926263145}
   endCanvas: {fileID: 219409657}
 --- !u!4 &1380174664
 Transform:
@@ -1915,8 +1915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dcf1cd127a55424898f0365eb5de02f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theNpc: {fileID: 926263143}
-  textControl: {fileID: 344802386}
+  theNpc: {fileID: 926263145}
+  textControl: {fileID: 344802389}
 --- !u!1 &1757202993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2010,7 +2010,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1973320513}
-  - component: {fileID: 1973320512}
+  - component: {fileID: 1973320514}
   m_Layer: 0
   m_Name: NPCManger
   m_TagString: Untagged
@@ -2018,22 +2018,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1973320512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973320511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f21b19f168140f747af680e14a456604, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentNPC: {fileID: 926263143}
-  allNPCTypes:
-  - {fileID: 11400000, guid: c631f782b581bb2488fd0b7ae13af13a, type: 2}
-  - {fileID: 11400000, guid: 16c7a06cdeef9b2438c69dc3fe7c7236, type: 2}
 --- !u!4 &1973320513
 Transform:
   m_ObjectHideFlags: 0
@@ -2050,6 +2034,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1973320514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973320511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21b19f168140f747af680e14a456604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentNPC: {fileID: 926263145}
+  allNPCTypes:
+  - {fileID: 11400000, guid: c631f782b581bb2488fd0b7ae13af13a, type: 2}
+  - {fileID: 11400000, guid: 16c7a06cdeef9b2438c69dc3fe7c7236, type: 2}
 --- !u!1 &2010670258
 GameObject:
   m_ObjectHideFlags: 0

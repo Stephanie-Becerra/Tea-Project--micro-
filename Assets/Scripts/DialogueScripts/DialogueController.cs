@@ -22,7 +22,7 @@ public class DialogueController : MonoBehaviour
     private Coroutine typeDiologueCorutine;
 
 
-
+    //
     public void DisplayNextParagraph(DialogueText npcText)
     {
         //when nothing is in the queue

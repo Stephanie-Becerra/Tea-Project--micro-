@@ -52,6 +52,7 @@ public class SubmitScipt : MonoBehaviour, IdropReact
         value = -1;
         submited = false;
     }
+    //
     public bool isSubmited() 
     {
         return submited;

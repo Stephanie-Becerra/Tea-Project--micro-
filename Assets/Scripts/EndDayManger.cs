@@ -26,4 +26,4 @@ public class EndDayManger : MonoBehaviour
     {
         SceneManager.LoadScene("StartMenuScene");
     }
-}
+}//

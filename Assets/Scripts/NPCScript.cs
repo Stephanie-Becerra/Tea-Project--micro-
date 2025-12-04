@@ -5,7 +5,9 @@ using System.Threading;
 using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
+/// <summary>
+/// 
+/// </summary>
 public class NPCScript : MonoBehaviour
 {
     private Vector3 startPosition = new Vector3(-13.0f, 2.93f, 0.0f);

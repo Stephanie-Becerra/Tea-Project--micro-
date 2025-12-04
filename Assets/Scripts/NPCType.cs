@@ -14,3 +14,4 @@ public class NPCType : ScriptableObject
     //numbers
     public float walkSpeed = 1;
 }
+//
