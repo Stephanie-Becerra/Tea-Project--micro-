@@ -37,7 +37,7 @@ public class CinnaminTeaScript : MonoBehaviour
         col.enabled = false;
         Collider2D hitCollider = Physics2D.OverlapPoint(transform.position);
         col.enabled = true;
-        if (hitCollider != null && hitCollider.TryGetComponent(out IdropReact dropArea))
+        if (hitCollider != null && hitCollider.gameObject.tag == "Teapot" && hitCollider.TryGetComponent(out IdropReact dropArea))
         {
             dropArea.OnObjectDrop(value);
             transform.position = startDragPosition;

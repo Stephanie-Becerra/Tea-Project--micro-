@@ -59,7 +59,7 @@ public class DialogueController : MonoBehaviour
         }
 
         NPCNameText.text = npcText.npcName;
-        string teaName = currentNPC.AssignRandomTea();
+        string teaName = currentNPC.currentTeaName;
 
         //has the change where it checks the array for any placeholder text to change 
         //then adds to the queue after the change has happened

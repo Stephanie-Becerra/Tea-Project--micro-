@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 141586229}
   m_Layer: 0
   m_Name: Trash
-  m_TagString: Untagged
+  m_TagString: Submit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1786,7 +1786,7 @@ GameObject:
   - component: {fileID: 1665022084}
   m_Layer: 0
   m_Name: Submit
-  m_TagString: Untagged
+  m_TagString: Submit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2344,6 +2344,10 @@ PrefabInstance:
     - target: {fileID: 4953247214732031999, guid: 8f58ecf689f0c4b4aa9578743aba1029, type: 3}
       propertyPath: m_Name
       value: TeaPot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953247214732031999, guid: 8f58ecf689f0c4b4aa9578743aba1029, type: 3}
+      propertyPath: m_TagString
+      value: Teapot
       objectReference: {fileID: 0}
     - target: {fileID: 7553791665861589166, guid: 8f58ecf689f0c4b4aa9578743aba1029, type: 3}
       propertyPath: m_RootOrder

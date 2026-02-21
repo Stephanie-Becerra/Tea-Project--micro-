@@ -21,6 +21,7 @@ public class NPCScript : MonoBehaviour
     public string[] teaNames = { "Black Tea", "Cinnamin tea" };
     public int[] teaTypes = { 0, 1 };
     public int currentTeaType;
+    public string currentTeaName;
 
     public NPCType currentNPC;
     private int numNpc;
@@ -39,6 +40,7 @@ public class NPCScript : MonoBehaviour
         numNpc = 1;
         transform.position = startPosition;
         currentPos = startPosition;
+        currentTeaName = AssignRandomTea();
         StartCoroutine(WalkCycleToConvo());
         StartCoroutine(startEndWalk());
     }
@@ -121,6 +123,7 @@ public class NPCScript : MonoBehaviour
         transform.position = startPosition;
         currentPos = startPosition;
         textCanvas.enabled = false;
+        currentTeaName = AssignRandomTea();
         StartCoroutine(WalkCycleToConvo());
         StartCoroutine(startEndWalk());
         numNpc++;
