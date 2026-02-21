@@ -8,6 +8,7 @@ public class SubmitScipt : MonoBehaviour, IdropReact
 
     [SerializeField] private NPCScript theNpc;
     [SerializeField] private DialogueController textControl;
+    [SerializeField] private TeaManger theTeaInPot;
     private int value = -1;
     private bool submited = false;
    

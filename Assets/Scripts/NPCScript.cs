@@ -13,13 +13,13 @@ public class NPCScript : MonoBehaviour
     private Vector3 startPosition = new Vector3(-13.0f, 2.93f, 0.0f);
     private Vector3 convoStartPosition = new Vector3(0.08f, 2.93f, 0.0f);
     private Vector3 endPosition = new Vector3(13.0f, 2.9f, 0.0f);
-
+    [SerializeField] private TeaManger teaMan;
     private Vector3 currentPos;
     //public float walkSpeed = 1;
 
     //array of tea names added for the text to work (hopefully won't cause issues)
-    public string[] teaNames = { "Black Tea", "Cinnamin tea" };
-    public int[] teaTypes = { 0, 1 };
+    //public string[] teaNames = { "Black Tea", "Cinnamin tea", "Cozy Black Tea" };
+    //public int[] teaTypes = { 1, 2, 3 };
     public int currentTeaType;
     public string currentTeaName;
 
@@ -45,10 +45,18 @@ public class NPCScript : MonoBehaviour
         StartCoroutine(startEndWalk());
     }
 
-    public string AssignRandomTea()
+    private string AssignRandomTea()
     {
-        currentTeaType = Random.Range(0, teaNames.Length);
-        return teaNames[currentTeaType];
+        string[] tempNames = teaMan.getTeaNames();
+        
+        int tempIter = Random.Range(0, tempNames.Length);
+        setTeaType(tempIter);
+        return tempNames[tempIter];
+    }
+    private void setTeaType(int tempIter) 
+    {
+        int[] tempVals = teaMan.getTeaVals();
+        currentTeaType = tempVals[tempIter];
     }
 
     public void OnMouseUp()
@@ -59,7 +67,7 @@ public class NPCScript : MonoBehaviour
     private IEnumerator WalkCycleToConvo()
     {
         textCanvas.enabled = false;
-        print(currentTeaType + "this is the tea type that was assigned");
+        print("this is the tea type that was assigned to the npc: " + currentTeaType);
         while (currentPos.x < convoStartPosition.x)
         {
             currentPos.x = currentPos.x + currentNPC.walkSpeed;

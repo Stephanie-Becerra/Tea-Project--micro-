@@ -10,7 +10,7 @@ public class TeapotScript : MonoBehaviour, IdropReact
     private int value = -1;
     private Collider2D col;
     private Vector3 startDragPosition;
-
+    [SerializeField] private TeaManger teaManager;
 
     void Start()
     {
@@ -19,10 +19,10 @@ public class TeapotScript : MonoBehaviour, IdropReact
 
     public void OnObjectDrop(int values)
     {
-        if (values != value)
+        if (value == -1)
         {
             value = values;
-
+            teaManager.setCurrentTeaInPot(value);
 
             //Remeber to remove this PLEASE 
             print("Tea recieved");
@@ -30,7 +30,18 @@ public class TeapotScript : MonoBehaviour, IdropReact
         }
         else if (value != -1 && values != value) 
         {
-            value += values;
+            int oldValue = value;
+            value = teaManager.combineVals(values, value);
+            if (oldValue == value) 
+            {
+                print("but nothing happened (the tea wasn't able to combine)");
+            }
+            else 
+            { 
+                teaManager.setCurrentTeaInPot(value);
+                print("THE TEA COMBINED AND IT HAS A VALUE OF: " + value);
+            }
+
         }
         else
         {
@@ -38,7 +49,7 @@ public class TeapotScript : MonoBehaviour, IdropReact
             /*Remeber to remove this or make a more meta text if 
              * this somehow ever happens
             */
-            print("NO TEA AAAAAAAAAAAAAAAA!");
+            print("THE FORBIDEN TEXT AAAAAAAAA (how did you get in here)!");
         }
     }
 

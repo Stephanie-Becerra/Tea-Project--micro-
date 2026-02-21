@@ -23,6 +23,14 @@ public class TeaManger : MonoBehaviour
             return null;
         }
     }
+    public string[] getTeaNames()
+    {
+        return teaNames;
+    }
+    public int[] getTeaVals()
+    {
+        return teaVals;
+    }
     //
     /// <summary>
     /// this acts like comments ?
@@ -32,7 +40,7 @@ public class TeaManger : MonoBehaviour
 
     // need to think of a way to check for special teas probably just have a array of just combo teas
     //let that be its own thing with own special values to check...
-    public bool isCombine(int val)
+   /* public bool isCombine(int val)
     {
         foreach (int vals in teaVals) 
         {
@@ -43,13 +51,22 @@ public class TeaManger : MonoBehaviour
         }
         return false;
     }
+    */
 
     public int combineVals(int val, int currVal)
     {
-        return val + currVal;
+        int combVal = val + currVal;
+        for (int i = 0; i < teaVals.Length; i++) 
+        {
+            if (teaVals[i] == combVal) 
+            {
+                return combVal;
+            }
+        }
+        return currVal;
     }
 
-    public void setCurrentTea(int val) 
+    public void setCurrentTeaInPot(int val) 
     {
         setCurrentVal(val);
         for (int i = 0; i < teaVals.Length; i++)
@@ -64,20 +81,22 @@ public class TeaManger : MonoBehaviour
 
 
 
-    public void setCurrentVal(int val) 
+    private void setCurrentVal(int val) 
     {
         currentVal = val;
         
     }
 
-    public void setCurrentIter(int iter) 
+    private void setCurrentIter(int iter) 
     {
         currentIter = iter;
     }
-    public void setCurrentTeaName(int iter) 
+    private void setCurrentTeaName(int iter) 
     {
         currentTea = teaNames[iter];
     }
+
+    
 
     public void Reset()
     {

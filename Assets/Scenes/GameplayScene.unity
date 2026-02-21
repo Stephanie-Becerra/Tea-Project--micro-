@@ -483,6 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b25177a935d7b84683e1e740d15afe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teaManager: {fileID: 2146784579}
 --- !u!1 &419577876
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +827,7 @@ MonoBehaviour:
   - Cinnamin tea
   teaTypes: 0000000001000000
   currentTeaType: 0
+  currentTeaName: 
   currentNPC: {fileID: 11400000, guid: 03ff8462ffbc8464fb77cb905e3c186d, type: 2}
   theTextController: {fileID: 344802389}
   textCanvas: {fileID: 419577879}
@@ -1917,6 +1919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theNpc: {fileID: 926263145}
   textControl: {fileID: 344802389}
+  theTeaInPot: {fileID: 0}
 --- !u!1 &1757202993
 GameObject:
   m_ObjectHideFlags: 0
