@@ -34,6 +34,7 @@ public class SubmitScipt : MonoBehaviour, IdropReact
             }
             else 
             {
+                theNpc.Talk(theNpc.currentNPC.wrongTeaDialogue);
                 print("Incorrect Tea please try again");
             }
 

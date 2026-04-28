@@ -9,6 +9,7 @@ public class NPCType : ScriptableObject
     public string npcName;
     public DialogueText greetingDialogue;
     public DialogueText endDialogue;
+    public DialogueText wrongTeaDialogue;
 
     //future for tea prefrence add public string[] tea names or have them assigned as 
     //numbers
