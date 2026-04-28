@@ -822,10 +822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f190dd73dff2cc4781e9b4174f43ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teaNames:
-  - Black Tea
-  - Cinnamin tea
-  teaTypes: 0000000001000000
+  teaMan: {fileID: 2146784579}
   currentTeaType: 0
   currentTeaName: 
   currentNPC: {fileID: 11400000, guid: 03ff8462ffbc8464fb77cb905e3c186d, type: 2}

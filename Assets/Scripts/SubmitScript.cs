@@ -25,10 +25,17 @@ public class SubmitScipt : MonoBehaviour, IdropReact
 
             //if (value == theNpc.teatype)
             //{
-                //Remeber to remove this PLEASE 
+            //Remeber to remove this PLEASE 
+            if (theNpc.currentTeaType == values)
+            {
                 print("Tea Submited");
                 print("Submited was black tea " + value);
                 submited = true;
+            }
+            else 
+            {
+                print("Incorrect Tea please try again");
+            }
 
             /* check on this code since it causes the teapot to not reset
              * was trying to account for a player not finishing the dialogue tree
