@@ -8,9 +8,9 @@ public class DialogueController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI NPCNameText;
     [SerializeField] private TextMeshProUGUI NPCDialogueText;
     [SerializeField] private NPCScript currentNPC;
-    
 
-   private Queue<string> qParagraphs = new Queue<string>();
+
+    private Queue<string> qParagraphs = new Queue<string>();
 
     private string p;
 
@@ -26,13 +26,13 @@ public class DialogueController : MonoBehaviour
     public void DisplayNextParagraph(DialogueText npcText)
     {
         //when nothing is in the queue
-        if(qParagraphs.Count == 0) 
+        if (qParagraphs.Count == 0)
         {
-            if (!endedConvo) 
+            if (!endedConvo)
             {
                 startConvo(npcText);
             }
-            else 
+            else
             {
                 endConvo();
                 return;
@@ -87,7 +87,7 @@ public class DialogueController : MonoBehaviour
 
 
     //to clear the queue if player didn't click to the end of the dialogue
-    public bool checkQueue()
+    public bool checkEmptyQueue()
     {
         if (qParagraphs.Count == 0 && !endedConvo)
         {
@@ -98,6 +98,7 @@ public class DialogueController : MonoBehaviour
             return false;
         }
     }
+
     public void forceEndConvo() 
     {
         qParagraphs.Clear();
