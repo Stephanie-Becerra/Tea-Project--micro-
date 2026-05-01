@@ -28,14 +28,14 @@ public class SubmitScipt : MonoBehaviour, IdropReact
             //Remeber to remove this PLEASE 
             if (theNpc.currentTeaType == values)
             {
-            
+
                 print("Tea Submited");
                 print("Submited was black tea " + value);
                 submited = true;
             }
-            else 
+            else
             {
-                if (!textControl.checkEmptyQueue()) 
+                if (!textControl.checkEmptyQueue())
                 {
                     textControl.forceEndConvo();
                 }
@@ -49,10 +49,29 @@ public class SubmitScipt : MonoBehaviour, IdropReact
 
             //if (textControl.checkQueue()) 
             //{
-              //  textControl.forceEndConvo();
+            //  textControl.forceEndConvo();
             //}
             //}
-           
+
+        }
+        else if (value != -1 && value == values) 
+        {
+            if (theNpc.currentTeaType == values)
+            {
+
+                print("Tea Submited");
+                print("Submited was black tea " + value);
+                submited = true;
+            }
+            else
+            {
+                if (!textControl.checkEmptyQueue())
+                {
+                    textControl.forceEndConvo();
+                }
+                theNpc.Talk(theNpc.currentNPC.wrongTeaDialogue);
+                print("Incorrect Tea please try again");
+            }
         }
         else
         {
